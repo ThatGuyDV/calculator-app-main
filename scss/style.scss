@@ -1,0 +1,35 @@
+@import 'variables';
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    font-family: $spartan-font;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: $main-bg;
+
+}
+
+.calculator{
+    font-size: 2rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+    & > button{
+        border-radius: 10px;
+    }
+    .number{
+        color: $numbers;
+        background-color: $num-key-bg;
+        outline: none;
+        border-bottom: 4px solid $num-key-shadow;
+    }
+}
