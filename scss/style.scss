@@ -22,6 +22,7 @@ body{
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    gap: 2rem;
 
     & > button{
         border-radius: 10px;
@@ -32,4 +33,25 @@ body{
         outline: none;
         border-bottom: 4px solid $num-key-shadow;
     }
+
+    & .display-screen{
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        background-color: $screen-bg;
+        color: $display;
+        border-radius: 10px;
+
+        .previous{
+            font-size: 1.5rem;
+        }
+
+        .current{
+            font-size: 2.5rem;
+        }
+    }
+
+    
 }
